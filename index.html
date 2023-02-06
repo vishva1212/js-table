@@ -1,0 +1,394 @@
+<!doctype.html>
+<html>
+<head>
+     <title> array table </title>
+</head>
+  <style>
+    table{
+	  background-color:yellow;
+	}
+	h1{
+		color:orange;
+		text-align:center;
+	
+	}
+  
+  </style>
+<body>
+      <h1> ARRAY METHODS</h1>
+       <table  border="1" cellpadding="15" cellspacing="0" align="center" width="100%">
+	     <tr class="one" style="background-color:green">
+			 <th> Sl.No </th>
+			 <th> Method name </th>
+			 <th> Description </th>
+			 <th> Example  </th>
+			 <th> Input </th>
+			 <th> Output </th>
+		  </tr>
+		  <tr>
+			 <td> 1 </td>
+			  <td>concat  </td>
+			  <td> The concat() method joins two or more strings.
+					The concat() method does not change the existing strings.
+					The concat() method returns a new string. </td>
+			  <td> let text1 = "sea";
+				let text2 = "food";
+				let result = text1.concat(text2);
+				document.write(result); </td>
+			  <td> let text1 = "sea";
+				let text2 = "food";
+				let result = text1.concat(text2);
+				document.write(result); </td>
+			   <td> seafood </td>
+		  </tr>
+		  <tr>
+		     <td>2</td>
+			 <td>constructor</td>
+			 <td>A constructor enables you to provide any custom initialization that must be done before 
+			 any other methods can be called on an instantiated object.</td>
+			 <td>class Polygon {
+				  constructor() {
+					this.name = 'Polygon';
+				  }
+				}
+				const poly1 = new Polygon();
+				console.log(poly1.name);</td>
+			 <td>class Polygon {
+				  constructor() {
+					this.name = 'Polygon';
+				  }
+				}
+				const poly1 = new Polygon();
+				console.log(poly1.name);</td>
+			 <td>"polygon"</td>
+		  </tr>
+		    <tr>
+		     <td>3</td>
+			 <td>entries</td>
+			 <td>When used on sparse arrays, the entries() method iterates empty slots as if they have the value undefined.
+              The entries() method is generic. It only expects the this value to have a length property and integer-keyed properties.</td>
+			 <td>const array1 = ['a', 'b', 'c'];
+					const iterator1 = array1.entries();
+					console.log(iterator1.next().value);
+					console.log(iterator1.next().value);</td>
+			 <td>const array1 = ['a', 'b', 'c'];
+					const iterator1 = array1.entries();
+					console.log(iterator1.next().value);
+					console.log(iterator1.next().value);</td>
+			 <td> Array [0, "a"]
+                  Array [1, "b"]</td>
+		  </tr>
+		    <tr>
+		     <td>4</td>
+			 <td>every</td>
+			 <td>The every() method executes a function for each array element.
+					The every() method returns true if the function returns true for all elements.
+					The every() method returns false if the function returns false for one element.
+					The every() method does not execute the function for empty elements.
+					The every() method does not change the original array</td>
+			 <td>const ages = [32, 33, 16, 40];
+					document.getElementById("demo").innerHTML = ages.every(checkAge);
+					function checkAge(age) {
+					  return age > 18;
+					}</td>
+			 <td>const ages = [32, 33, 16, 40];
+					document.getElementById("demo").innerHTML = ages.every(checkAge);
+					function checkAge(age) {
+					  return age > 18;
+					}</td>
+			 <td>false</td>
+		  </tr>
+		    <tr>
+		     <td>5</td>
+			 <td>filter</td>
+			 <td>The filter() method creates a new array filled with elements that pass a test provided by a function.
+					The filter() method does not execute the function for empty elements.
+					The filter() method does not change the original array.</td>
+			 <td>const ages = [32, 33, 16, 40];
+						document.getElementById("demo").innerHTML = ages.filter(checkAdult);
+						function checkAdult(age) {
+						  return age >= 18;
+					}</td>
+			 <td>const ages = [32, 33, 16, 40];
+					document.getElementById("demo").innerHTML = ages.filter(checkAdult);
+					function checkAdult(age) {
+					  return age >= 18;
+					}</td>
+			 <td> 32,33,40</td>
+		  </tr>
+		    <tr>
+		     <td>6</td>
+			 <td>find</td>
+			 <td>The Javascript arr.find() method in Javascript is used to get the value of the first element in the array that satisfies the provided condition. It checks all the elements of the array and whichever the first element satisfies 
+			 the condition is going to print. This function will not work function having the empty array elements, and also does not change the original array.</td>
+			 <td> var array = [10, 20, 30, 40, 50];
+					var found = array.find(function (element) {
+						return element > 20;
+					});
+				   console.log(found);</td>
+			 <td>var array = [10, 20, 30, 40, 50];
+					var found = array.find(function (element) {
+						return element > 20;
+					});
+				   console.log(found);</td>
+			 <td>30</td>
+		  </tr>
+		    <tr>
+		     <td>7</td>
+			 <td>find index</td>
+			 <td>The Javascript Array.findIndex() method is used to return the first index of the element in a given 
+			 array that satisfies the provided testing function (passed in by the user while calling). Otherwise, if no data is found then the value of -1 is returned.</td>
+			 <td> function isOdd(element, index, array) {
+					  return (element%2 == 1);
+					}
+					console.log(([4, 6, 8, 12].findIndex(isOdd))); </td>
+			 <td>function isOdd(element, index, array) {
+					  return (element%2 == 1);
+					}
+					console.log(([4, 6, 8, 12].findIndex(isOdd)));</td>
+			 <td> -1</td>
+		  </tr>
+		    <tr>
+		     <td>8</td>
+			 <td>find last</td>
+			 <td> The findLast() method iterates the array in reverse order 
+			 and returns the value of the first element that satisfies the provided testing function. If no elements satisfy the testing function, undefined is returned.</td>
+			 <td>const array1 = [5, 12, 50, 130, 44];
+					const found = array1.findLast((element) => element > 45);
+					console.log(found);</td>
+			 <td>const array1 = [5, 12, 50, 130, 44];
+					const found = array1.findLast((element) => element > 45);
+					console.log(found);</td>
+			 <td> 130</td>
+		  </tr>
+		    <tr>
+		     <td>9</td>
+			 <td>find last index</td>
+			 <td>The findLastIndex() method iterates the array in reverse order and returns the index of the first element that satisfies the provided testing function.
+			 If no elements satisfy the testing function, -1 is returned.</td>
+			 <td>const array1 = [5, 12, 50, 130, 44];
+					const isLargeNumber = (element) => element > 45;
+					console.log(array1.findLastIndex(isLargeNumber));</td>
+			 <td>const array1 = [5, 12, 50, 130, 44];
+					const isLargeNumber = (element) => element > 45;
+					console.log(array1.findLastIndex(isLargeNumber));</td>
+			 <td> 3</td>
+		  </tr>
+		    <tr>
+		     <td>10</td>
+			 <td>map</td>
+			 <td>The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.</td>
+			 <td>const array1 = [1, 4, 9, 16];
+					const map1 = array1.map(x => x * 2);
+					console.log(map1);</td>
+			 <td>const array1 = [1, 4, 9, 16];
+					const map1 = array1.map(x => x * 2);
+					console.log(map1);</td>
+			 <td> Array [2, 8, 18, 32]</td>
+		  </tr>
+		    <tr>
+		     <td>11</td>
+			 <td>pop</td>
+			 <td>The pop() method removes the last element from an array and returns that element. This method changes the length of the array.</td>
+			 <td>const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
+						console.log(plants.pop());</td>
+			 <td>const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
+						console.log(plants.pop());</td>
+			 <td>"tomato"</td>
+		  </tr>
+		    <tr>
+		     <td>12</td>
+			 <td>push</td>
+			 <td>The push() method adds one or more elements to the end of an array and returns the new length of the array.</td>
+			 <td>const animals = ['pigs', 'goats', 'sheep'];
+					const count = animals.push('cows');
+					console.log(animals);</td>
+			 <td>const animals = ['pigs', 'goats', 'sheep'];
+					const count = animals.push('cows');
+					console.log(animals);</td>
+			 <td>Array ["pigs", "goats", "sheep", "cows"]</td>
+		  </tr>
+		    <tr>
+		     <td>13</td>
+			 <td>shift</td>
+			 <td>The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.</td>
+			 <td>const array1 = [1, 2, 3];
+					const firstElement = array1.shift();
+					console.log(array1);</td>
+			 <td>const array1 = [1, 2, 3];
+					const firstElement = array1.shift();
+					console.log(array1);</td>
+			 <td>Array [2, 3]</td>
+		  </tr>
+		    <tr>
+		     <td> 14</td>
+			 <td>slice</td>
+			 <td>The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included)
+			 where start and end represent the index of items in that array. The original array will not be modified.</td>
+			 <td>const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+					console.log(animals.slice(2));
+					console.log(animals.slice(2, 4));</td>
+			 <td>const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+					console.log(animals.slice(2));
+					console.log(animals.slice(2, 4));</td>
+			 <td>Array ["camel", "duck", "elephant"]
+                 Array ["camel", "duck"]</td>
+		  </tr>
+		    <tr>
+		     <td>15</td>
+			 <td>for each</td>
+			 <td>The forEach() method executes a provided function once for each array element.</td>
+			 <td>const array1 = ['a', 'b', 'c'];
+                   array1.forEach(element => console.log(element));</td>
+			 <td>const array1 = ['a', 'b', 'c'];
+                   array1.forEach(element => console.log(element));</td>
+			 <td>"a"
+				 "b"
+				 "c"</td>
+		  </tr>
+		    <tr>
+		     <td>16</td>
+			 <td>index of</td>
+			 <td>The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.</td>
+			 <td>const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+						console.log(beasts.indexOf('bison'));
+						console.log(beasts.indexOf('bison', 2));</td>
+			 <td>const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+						console.log(beasts.indexOf('bison'));
+						console.log(beasts.indexOf('bison', 2));</td>
+			 <td>1,4</td>
+		  </tr>
+		    <tr>
+		     <td>17</td>
+			 <td>last index of</td>
+			 <td>The lastIndexOf() method returns the last index at which a given element can be found in the array, or -1 if it is not present.
+			 The array is searched backwards, starting at fromIndex.</td>
+			 <td>const animals = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
+					console.log(animals.lastIndexOf('Dodo'));
+					console.log(animals.lastIndexOf('Tiger'));</td>
+			 <td>const animals = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
+					console.log(animals.lastIndexOf('Dodo'));
+					console.log(animals.lastIndexOf('Tiger'));</td>
+			 <td>3,1</td>
+		  </tr>
+		    <tr>
+		     <td>18</td>
+			 <td>reduce</td>
+			 <td>The reduce() method executes a user-supplied "reducer" callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element.
+			 The final result of running the reducer across all elements of the array is a single value.</td>
+			 <td>const array1 = [1, 2, 3, 4];
+					const initialValue = 0;
+					const sumWithInitial = array1.reduce(
+					  (accumulator, currentValue) => accumulator + currentValue,
+					  initialValue
+					);
+					console.log(sumWithInitial);</td>
+			 <td>const array1 = [1, 2, 3, 4];
+					const initialValue = 0;
+					const sumWithInitial = array1.reduce(
+					  (accumulator, currentValue) => accumulator + currentValue,
+					  initialValue
+					);
+					console.log(sumWithInitial);</td>
+			 <td>10</td>
+		  </tr>
+		    <tr>
+		     <td>19</td>
+			 <td>reverse</td>
+			 <td>The reverse() method reverses an array in place and returns the reference to the same array, the first array element now becoming the last, and the last array element becoming the first. In other words,
+			 elements order in the array will be turned towards the direction opposite to that previously stated.</td>
+			 <td>const array1 = ['one', 'two', 'three'];
+					console.log('array1:', array1);
+					const reversed = array1.reverse();
+					console.log('reversed:', reversed);</td>
+			 <td>const array1 = ['one', 'two', 'three'];
+					console.log('array1:', array1);
+					const reversed = array1.reverse();
+					console.log('reversed:', reversed);</td>
+			 <td>"array1:" Array ["one", "two", "three"]
+                  "reversed:" Array ["three", "two", "one"]</td>
+		  </tr>
+		    <tr>
+		     <td>20</td>
+			 <td>sort</td>
+			 <td>The sort() method sorts the elements of an array in place and returns the reference to the same array, now sorted. The default sort order is ascending, built upon converting the elements into strings,
+			 then comparing their sequences of UTF-16 code units values.
+                The time and space complexity of the sort cannot be guaranteed as it depends on the implementation.</td>
+			 <td>const months = ['March', 'Jan', 'Feb', 'Dec'];
+						months.sort();
+						console.log(months);
+						const array1 = [1, 30, 4, 21, 100000];
+						array1.sort();
+						console.log(array1);</td>
+			 <td>const months = ['March', 'Jan', 'Feb', 'Dec'];
+						months.sort();
+						console.log(months);
+						const array1 = [1, 30, 4, 21, 100000];
+						array1.sort();
+						console.log(array1);</td>
+			 <td>Array ["Dec", "Feb", "Jan", "March"]
+			    Array [1, 100000, 21, 30, 4]</td>
+		  </tr>
+		    <tr>
+		     <td>21</td>
+			 <td>splice</td>
+			 <td>The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+			 To access part of an array without modifying it, see slice().</td>
+			 <td>const months = ['Jan', 'March', 'April', 'June'];
+					months.splice(1, 0, 'Feb');
+					console.log(months);
+					months.splice(4, 1, 'May');
+					console.log(months);</td>
+			 <td>const months = ['Jan', 'March', 'April', 'June'];
+					months.splice(1, 0, 'Feb');
+					console.log(months);
+					months.splice(4, 1, 'May');
+					console.log(months);</td>
+			 <td>Array ["Jan", "Feb", "March", "April", "June"]
+                   Array ["Jan", "Feb", "March", "April", "May"]</td>
+		  </tr>
+		    <tr>
+		     <td>22</td>
+			 <td>to local string</td>
+			 <td>The toLocaleString() method returns a string representing the elements of the array. The elements are converted to Strings using their toLocaleString
+			 methods and these Strings are separated by a locale-specific String (such as a comma ",").</td>
+			 <td>const array1 = [1, 'a', new Date('21 Dec 1997 14:12:00 UTC')];
+					const localeString = array1.toLocaleString('en', { timeZone: 'UTC' });
+					console.log(localeString);</td>
+			 <td>const array1 = [1, 'a', new Date('21 Dec 1997 14:12:00 UTC')];
+					const localeString = array1.toLocaleString('en', { timeZone: 'UTC' });
+					console.log(localeString);</td>
+			 <td>"1,a,12/21/1997, 2:12:00 PM"</td>
+		  </tr>
+		    <tr>
+		     <td>23</td>
+			 <td>to string</td>
+			 <td>The toString() method returns a string representing the specified array and its elements.</td>
+			 <td>const array1 = [1, 2, 'a', '1a'];
+					console.log(array1.toString());</td>
+			 <td>const array1 = [1, 2, 'a', '1a'];
+					console.log(array1.toString());</td>
+			 <td> "1,2,a,1a"</td>
+		  </tr>
+		    <tr>
+		     <td>24</td>
+			 <td>unshift</td>
+			 <td>The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.</td>
+			 <td>const array1 = [1, 2, 3];
+					console.log(array1.unshift(4, 5));
+					console.log(array1);</td>
+			 <td>const array1 = [1, 2, 3];
+					console.log(array1.unshift(4, 5));
+					console.log(array1);</td>
+			 <td>5,
+               Array [4, 5, 1, 2, 3]</td>
+		  </tr>
+		    
+		 
+        
+
+
+
+
+</body>
+</html>
